@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr Pepper Lorem Ipsum Generator</title>
+    <link rel="stylesheet" href="/assets/css/drpepper.css" />
+  </head>
+  <body
+    class="bg-dr-pepper-dark text-dr-pepper-light font-sans flex items-center justify-center min-h-screen p-5"
+  >
+    <div
+      class="bg-dr-pepper-medium max-w-3xl w-full p-8 rounded-xl shadow-2xl"
+    >
+      <h1
+        class="text-white text-3xl font-bold text-center pb-4 mb-6 border-b-2 border-dr-pepper-light"
+      >
+        Dr Pepper Ipsum Generator
+      </h1>
+
+      <form
+        id="ipsum-form"
+        action="/api"
+        method="POST"
+        class="flex justify-center items-center gap-4 mb-8"
+      >
+        <label for="paragraphs" class="text-lg font-medium"
+          >Number of Paragraphs:</label
+        >
+        <input
+          type="number"
+          id="paragraphs"
+          name="paragraphs"
+          value="4"
+          min="1"
+          max="100"
+          class="p-2 rounded-md border border-dr-pepper-dark text-gray-900 w-20 text-base focus:ring-2 focus:ring-dr-pepper-light focus:outline-none"
+        />
+        <button
+          type="submit"
+          class="py-2 px-5 rounded-md bg-dr-pepper-dark text-white font-semibold transition-colors hover:bg-dr-pepper-darker disabled:opacity-60 disabled:cursor-wait"
+        >
+          Generate Flavor
+        </button>
+      </form>
+
+      <div
+        id="ipsum-output"
+        class="bg-dr-pepper-light text-gray-800 p-5 rounded-lg border-2 border-dashed border-dr-pepper-dark min-h-[150px] space-y-4"
+      >
+        <p>Click the button to generate some flavor-filled text!</p>
+      </div>
+    </div>
+
+    <script type="module" src="/assets/js/drpepper.js"></script>
+  </body>
+</html>
